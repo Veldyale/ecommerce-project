@@ -1,0 +1,68 @@
+{% load static %}
+
+html,
+body {
+    position:relative;
+    vertical-align: middle;
+    height: 100vh-70px;
+    margin-top: 40px;
+    margin-bottom: 33px;
+
+.main-img {
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+
+.product_title {
+    font-size:30px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-bottom: 5px;
+}
+
+.product_text {
+    padding-right: 20px;
+}
+
+.product_desc {
+    font-size:24px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.errorIst li {
+    color: red;
+    font-weight: bold;
+}
+
+.custom_div {
+    margin-bottom: 20px !important;
+}
+
+
+#carouselExampleIndicators {
+    height: 78%;
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.carousel-control-next-icon {
+    filter: invert(100%);
+    width: 120%;
+}
+
+.carousel-control-prev-icon {
+    filter: invert(100%)
+}
+
+.carousel-indicators {
+    filter: invert(100%)
+}
+
+.radius_none {
+    border-radius: 0px;
+}

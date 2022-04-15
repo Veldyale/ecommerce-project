@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+  Log In
+{% endblock %}
+
+{% block img %}
+url('{% static 'img/main_white.jpg' %}')
+{% endblock %}
+
+
+{% block content %}
+  <div class="container">
+      <h1 class="product_title text-center mt-4">
+          Авторизация
+      </h1>
+      <div class="">
+          <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-6 mx-auto">
+              <div>
+                  <br>
+                  <h4 class="product_title text-center">
+                      Для зарегестрированных пользователей
+                  </h4>
+                  <form method="post">
+                      {% csrf_token %}
+                      <p>{{ form | crispy }}</p>
+                      <div class="text-center">
+                          <br>
+                          <button type="submit" class="col-12 pl-4 pr-4 btn btn-success">
+                              Войти
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-6 mx-auto">
+            <br>
+            <div class="h4 product_title text-center">
+              Для новых пользователей
+            </div>
+            <br>
+            <a href="{% url 'signup' %}" class="col-12 btn btn-danger">Регистрация</a>
+          </div>
+      </div>
+      <br>
+  </div>
+  <br>
+
+{% endblock %}
